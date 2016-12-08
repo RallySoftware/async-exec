@@ -11,5 +11,5 @@ Then in your code
     import exec from 'async-exec';
     
     await exec(`osascript -e "set volume ${scaledVolume}"`);
-    const tsFiles = await execCommand(`find . -name "*.ts"`);
+    const tsFiles = await exec(`find . -name "*.ts"`);
     
