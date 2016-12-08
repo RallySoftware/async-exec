@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "noFallthroughCasesInSwitch": true,
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "target": "es6",
+    "sourceMap": true,
+    "pretty": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
