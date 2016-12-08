@@ -13,6 +13,9 @@
     "async",
     "exec"
   ],
+  "files": [
+    "*.js"
+  ],
   "author": "Wade Peterson <wade.peterson@ca.com>",
   "license": "ISC",
   "devDependencies": {
