@@ -1,0 +1,21 @@
+{
+  "name": "async-exec",
+  "version": "0.0.1",
+  "description": "Promise based exec",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -d",
+    "prepublish": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "async",
+    "exec"
+  ],
+  "author": "Wade Peterson <wade.peterson@ca.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "6.0.51",
+    "typescript": "2.1.4"
+  }
+}
