@@ -1,6 +1,6 @@
 {
   "name": "async-exec",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Promise based exec",
   "main": "index.js",
   "types": "index.d.ts",
@@ -14,6 +14,7 @@
     "exec"
   ],
   "files": [
+    "*.d.ts",
     "*.js"
   ],
   "author": "Wade Peterson <wade.peterson@ca.com>",
