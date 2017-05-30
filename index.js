@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const child_process_1 = require("child_process");
 function printLines(data) {
     data.toString().split('\n').forEach(line => {
@@ -20,6 +21,5 @@ function default_1(command, logOutput = false) {
         }
     });
 }
-Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = default_1;
 //# sourceMappingURL=index.js.map
