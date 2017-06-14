@@ -17,7 +17,7 @@ export default function(command: string, logOutput: boolean = false): Promise<st
     });
 
     if (logOutput) {
-      process.on('data', (data: Object) => printLines(data));
+      process.stdout.on('data', (data: Object) => printLines(data));
     }
   });
 }
