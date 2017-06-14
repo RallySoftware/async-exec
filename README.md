@@ -1,5 +1,7 @@
 # Async-Exec
 
+[![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.svg?v=101)]
+
 Have you ever wanted to exec things asyncly? Now you can!
 
 ## Usage
