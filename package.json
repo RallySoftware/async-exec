@@ -5,9 +5,10 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
+    "clean": "git clean -fX",
     "build": "tsc -d",
     "prepublish": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run clean && npm run build && mocha"
   },
   "keywords": [
     "async",
@@ -20,7 +21,11 @@
   "author": "Wade Peterson <wade.peterson@ca.com>",
   "license": "ISC",
   "devDependencies": {
+    "@types/chai": "^4.0.0",
+    "@types/mocha": "^2.2.41",
     "@types/node": "6.0.51",
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2",
     "typescript": "2.1.4"
   },
   "repository": "git@github.com:RallySoftware/async-exec.git"
