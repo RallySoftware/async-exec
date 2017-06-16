@@ -1,19 +1,30 @@
-import exec from '../index'
-import { assert } from 'chai'
+import exec, { execWithCallbackOnLine } from '../index';
+import { assert } from 'chai';
 
-describe("async exec", () => {
-  const cmd = 'node logger'
-  const expected = 'hello\n'
+const cmd = 'node logger'; // this runs the compiled logger.ts in the root dir
+const expectedLines = ['hello', ''];
+const expectedOutput = expectedLines.join('\n');
 
+describe("#exec", () => {
   describe("by default", () => {
     it("should return expected output", async () => {
-      assert.equal(await exec(cmd), expected)
+      assert.equal(await exec(cmd), expectedOutput);
     })
   })
 
-  describe("when asked to print the output as it's received", () => {
-    it("should also print the output", async () => {
-      assert.equal(await exec(cmd, true), expected)
+  describe("with true passed on the second arg", () => {
+    it("^ should say hello from the console.log", async () => {
+      await exec(cmd, true);
     })
   })
-})
+});
+
+describe("#execWithCallbackOnLine", () => {
+  it("should call the function with each line of output", async () => {
+    const actualLines: any[] = [];
+    await execWithCallbackOnLine(cmd, (loggedLine) => {
+      actualLines.push(loggedLine);
+    });
+    assert.deepEqual(actualLines, expectedLines);
+  });
+});
